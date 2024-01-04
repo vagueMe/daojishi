@@ -78,16 +78,16 @@ export default {
       ],
       twoBarrier: [
         {title: "月华", value: 60},
-        {title: "樱花1", value: 50},
-        {title: "樱花2", value: 50},
-        {title: "樱花3", value: 50},
-        {title: "樱花4", value: 50},
+        {title: "1号樱花", value: 50},
+        {title: "2号樱花", value: 50},
+        {title: "3号樱花", value: 50},
+        {title: "4号樱花", value: 50},
       ],
       fourBarrier: [
-        {title: "boss投石", value: 35},
-        {title: "boss地洞波", value: 30},
-        {title: "左小怪地洞波", value: 30},
-        {title: "右小怪地洞波", value: 30}
+        {title: "主投石", value: 35},
+        {title: "主地动波", value: 30},
+        {title: "左怪地动波", value: 30},
+        {title: "右怪地动波", value: 30}
       ],
       rules: {
         value: [
