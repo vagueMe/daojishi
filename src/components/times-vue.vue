@@ -2,6 +2,7 @@
   <el-row>
     <el-col :span="24" style="font-size: 29px;text-align: center; color: red"><span>{{ currentTime }}</span></el-col>
     <el-col :span="24" style="font-size: 20px;text-align: center;color: green"><span>&lt;{{ title }}&gt;</span></el-col>
+    <el-col :span="24" style="font-size: 14px;text-align: center;"><span>{{ describe }}</span></el-col>
     <el-col :span="24" style="font-size: 29px;text-align: center;">
       <el-button v-if="supt === 1" @click="start">开启</el-button>
       <el-button v-if="supt === 3" @click="pause">暂停</el-button>
@@ -17,6 +18,7 @@ export default {
   name: 'times-vue',
   props: {
     allTimes: Number,
+    describe: String,
     title: String
   },
   data() {

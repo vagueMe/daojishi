@@ -22,11 +22,38 @@
           <el-col v-for="(item, index) in twoBarrier" :key="index" :span="index === 0 ? 20 : 10 " style="margin-bottom: 20px;margin-left: 20px;
               border-color: black;border-style:dashed;
             ">
-            <TimesVue :allTimes="item.value" :title="item.title"/>
+            <TimesVue :allTimes="item.value" :title="item.title" :describe="item.describe" />
           </el-col>
         </el-row>
       </el-tab-pane>
+      <el-tab-pane label="第三">
+        <el-row>
+          <span>瞬影</span><br>
+          <span>灭影</span><br>
+          <span>瞬影</span><br>
+          <span style="color: red">居合斩</span><br>
+          <span>灭影</span><br>
+          <span>瞬影</span><br>
+          <span>灭影</span><br>
+          <span>瞬影</span><br>
+          <span style="color: red">列光斩</span><br>
+          <span>灭影</span><br>
+          <span>瞬影</span><br>
+          <span style="color: red">凌风斩</span><br>
+          <span>灭影</span><br>
+          <span>瞬影</span><br>
+          <span style="color: red">居合斩</span><br>
+          <span>灭影--技能放过后如果血量低于20% 直接<span style="color: red">列光斩</span></span><br>
+          <span>瞬影</span><br>
+          <span style="color: red">列光斩</span><br>
+          <span>灭影</span><br>
+          <span style="color: red">狂暴</span><br>
+          <br><br><br>
+          <span>大面向-游乐园-点名承伤+大黑洞-内外圈-游乐园-点名承伤+大黑洞-内外圈-游乐园-点名承伤+大黑洞-5S后狂暴</span>
+        </el-row>
+      </el-tab-pane>
       <el-tab-pane label="第四">
+        <el-row style="text-align: center;font-size: 28px;">25%环形山</el-row>
         <el-row>
           <el-col v-for="(item, index) in fourBarrier" :key="index" :span="10" style="margin-bottom: 20px;margin-left: 20px;
         border-color: black;border-style:dashed;
@@ -78,10 +105,10 @@ export default {
       ],
       twoBarrier: [
         {title: "月华", value: 60},
-        {title: "1号樱花", value: 50},
-        {title: "2号樱花", value: 50},
-        {title: "3号樱花", value: 50},
-        {title: "4号樱花", value: 50},
+        {title: "1号樱花", value: 50, describe: "90%出"},
+        {title: "2号樱花", value: 50, describe: "70%出"},
+        {title: "3号樱花", value: 50, describe: "45%出"},
+        {title: "4号樱花", value: 50, describe: "20%出"},
       ],
       fourBarrier: [
         {title: "主投石", value: 35},
