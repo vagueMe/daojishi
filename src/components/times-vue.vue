@@ -39,20 +39,19 @@ export default {
   methods: {
     start() {
       this.supt = 3
-      this.currentTime = this.time;
       this.timerID = setInterval(() => {
-        this.currentTime--;
-        this.time = this.currentTime;
-        if (this.currentTime < 0) {
-          clearInterval(this.timerID);
-          this.reset();
-          this.start()
-        } else if (this.currentTime === 5) {
+        this.currentTime = this.currentTime - 1;
+        console.log(this.currentTime);
+        if (this.currentTime === 4) {
           this.speech.text = this.title + "准备";
+          console.log(this.speech.text);
           window.speechSynthesis.speak(this.speech);
         } else if (this.currentTime === 0) {
           this.speech.text = this.title + "开始";
+          console.log(this.speech.text);
           window.speechSynthesis.speak(this.speech);
+          this.reset();
+          this.start()
         }
       }, 1000);
 
@@ -70,7 +69,6 @@ export default {
     reset() {
       clearInterval(this.timerID);
       this.supt = 1;
-      this.time = this.allTimes;
       this.currentTime = this.allTimes;
     }
   }
