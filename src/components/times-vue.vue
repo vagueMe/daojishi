@@ -41,14 +41,11 @@ export default {
       this.supt = 3
       this.timerID = setInterval(() => {
         this.currentTime = this.currentTime - 1;
-        console.log(this.currentTime);
         if (this.currentTime === 4) {
           this.speech.text = this.title + "准备";
-          console.log(this.speech.text);
           window.speechSynthesis.speak(this.speech);
         } else if (this.currentTime === 0) {
           this.speech.text = this.title + "开始";
-          console.log(this.speech.text);
           window.speechSynthesis.speak(this.speech);
           this.reset();
           this.start()
