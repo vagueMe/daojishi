@@ -28,39 +28,48 @@
       </el-tab-pane>
       <el-tab-pane label="第三">
         <el-row>
-          <span>瞬影</span><br>
-          <span>灭影</span><br>
-          <span>瞬影</span><br>
-          <span style="color: red">居合斩</span><br>
-          <span>灭影</span><br>
-          <span>瞬影</span><br>
-          <span>灭影</span><br>
-          <span>瞬影</span><br>
-          <span style="color: red">列光斩</span><br>
-          <span>灭影</span><br>
-          <span>瞬影</span><br>
-          <span style="color: red">凌风斩</span><br>
-          <span>灭影</span><br>
-          <span>瞬影</span><br>
-          <span style="color: red">居合斩</span><br>
-          <span>灭影--技能放过后如果血量低于20% 直接<span style="color: red">列光斩</span></span><br>
-          <span>瞬影</span><br>
-          <span style="color: red">列光斩</span><br>
-          <span>灭影</span><br>
-          <span style="color: red">狂暴</span><br>
-          <br><br><br>
-          <span>大面向-游乐园-点名承伤+大黑洞-内外圈-游乐园-点名承伤+大黑洞-内外圈-游乐园-点名承伤+大黑洞-5S后狂暴</span>
+          <el-tabs type="border-card2">
+            <el-tab-pane label="p1">
+              <el-row>
+                <img src="./assets/p3_1.png" alt="" style="margin-top: 20px;" >
+              </el-row>
+            </el-tab-pane>
+            <el-tab-pane label="p2">
+              <el-row>
+                <img src="./assets/p3_2.png" alt="" style="margin-top: 20px;" >
+              </el-row>
+            </el-tab-pane>
+          </el-tabs>
         </el-row>
       </el-tab-pane>
       <el-tab-pane label="第四">
-        <el-row style="text-align: center;font-size: 28px;">25%环形山</el-row>
+        <el-row style="text-align: center;font-size: 28px;">50%盾,35%盾,25%环形山,20%盾,5%盾+环形山</el-row>
         <el-row>
           <el-col v-for="(item, index) in fourBarrier" :key="index" :span="10" style="margin-bottom: 20px;margin-left: 20px;
         border-color: black;border-style:dashed;
       ">
-            <TimesVue :allTimes="item.value" :title="item.title"/>
+            <TimesVue :allTimes="item.value" :title="item.title" :describe="item.describe"/>
           </el-col>
         </el-row>
+      </el-tab-pane>
+      <el-tab-pane label="第五">
+        <el-row>
+          <img src="./assets/p5.png" alt="" style="margin-top: 20px;" >
+        </el-row>
+      </el-tab-pane>
+      <el-tab-pane label="第六">
+        <el-tabs type="border-card2">
+          <el-tab-pane label="p1">
+            <el-row>
+              <img src="./assets/p6_1.png" alt="" style="margin-top: 20px;" >
+            </el-row>
+          </el-tab-pane>
+          <el-tab-pane label="p2">
+            <el-row>
+              <img src="./assets/p6_2.png" alt="" style="margin-top: 20px;" >
+            </el-row>
+          </el-tab-pane>
+        </el-tabs>
       </el-tab-pane>
     </el-tabs>
 
@@ -111,10 +120,12 @@ export default {
         {title: "4号樱花", value: 50, describe: "20%出"},
       ],
       fourBarrier: [
-        {title: "主投石", value: 35},
-        {title: "主地动波", value: 30},
-        {title: "左怪地动波", value: 30},
-        {title: "右怪地动波", value: 30}
+        {title: "主投石", value: 45,describe: "75%出"},
+        {title: "主地动波", value: 20,describe: "无"},
+        {title: "1号地动波", value: 20,describe: "80%出"},
+        {title: "2号地动波", value: 20, describe: "60%出"},
+        {title: "3号地动波", value: 20, describe: "40%出"},
+        {title: "4号地动波", value: 20, describe: "20%出"}
       ],
       rules: {
         value: [
